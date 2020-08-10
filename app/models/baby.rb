@@ -24,7 +24,9 @@ class Baby < ApplicationRecord
 
     #  La fecha de la última vez que tomó pecho
     def last_time_breastfed
-        breastfeedings.last.date.strftime("%d-%m-%Y / %H:%M")
+        if breastfeedings.count > 0
+            breastfeedings.last.date.strftime("%d-%m-%Y / %H:%M")            
+        end
     end
 
     # Cuánto tiempo ha tomado este día
