@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 1.5
+  cc-milk: 1.5
+  day: 2020-08-09 20:30:16
+
+two:
+  time: 1.5
+  cc-milk: 1.5
+  day: 2020-08-09 20:30:16

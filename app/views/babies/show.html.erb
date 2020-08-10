@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Baby:  <%= @baby.name %></h1>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th>Breastfed today</th>
+      <th>Last time breastfed</th>
+      <th>Breastfed time today</th>
+      <th>Quantity Breastfed today(cc)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @baby.breastfed_today %> </td>
+      <td><%= @baby.last_time_breastfed %> </td>
+      <td><%= @baby.breastfed_duration_today %></td>
+      <td><%= @baby.breastfed_quantity_today %></td>
+    </tr>
+  
+  </tbody>
+</table>
+<br>
+<h3>Breastfeedings</h3>
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th>Breastfeeding time</th>
+      <th>Cc Milk</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @baby.breastfeedings.each do |breastfeeding| %>
+      <tr>
+        <td><%= breastfeeding.duration %></td>
+        <td><%= breastfeeding.quantity %></td>
+        <td><%= breastfeeding.date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Back', babies_path, class:"btn btn-outline-secondary" %>
